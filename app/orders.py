@@ -12,7 +12,7 @@ class OrderCreate(BaseModel):
 
 async def place_order(payload: OrderCreate, client: AsyncIOMotorClient, catalog_base: str):
     async with httpx.AsyncClient(timeout=5.0) as http:
-        total_cents = 0
+        total_price = 0
         # Validate each item & reserve
         for it in payload.items:
             r = await http.get(f"{catalog_base}/books/{it.book_id}")
@@ -24,12 +24,12 @@ async def place_order(payload: OrderCreate, client: AsyncIOMotorClient, catalog_
             r2 = await http.post(f"{catalog_base}/books/{it.book_id}/reserve", json={"qty": it.qty})
             if r2.status_code != 200:
                 raise HTTPException(409, f"Insufficient stock for book {it.book_id}")
-            total_cents += price * it.qty
+            total_price += price * it.qty
 
     order_doc = {
         "items": [i.dict() for i in payload.items],
         "status": "PLACED",
-        "total_cents": total_cents
+        "total_price": total_price
     }
     res = await client[ "ordersdb" ]["orders"].insert_one(order_doc)
     order_doc["_id"] = str(res.inserted_id)
