@@ -19,7 +19,7 @@ async def place_order(payload: OrderCreate, client: AsyncIOMotorClient, catalog_
             if r.status_code == 404:
                 raise HTTPException(400, f"Book {it.book_id} not found")
             book = r.json()
-            price = book["price_cents"]
+            price = book["price"]
             # reserve
             r2 = await http.post(f"{catalog_base}/books/{it.book_id}/reserve", json={"qty": it.qty})
             if r2.status_code != 200:
