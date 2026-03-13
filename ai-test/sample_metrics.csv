@@ -1,0 +1,9 @@
+timestamp,server_id,cpu_usage_percent,memory_usage_percent,disk_usage_percent,network_in_mbps,request_rate,response_time_ms,instance_count,cpu_capacity_cores,memory_capacity_gb,active_users,transactions,error_rate_percent,cpu_threshold,memory_threshold,disk_threshold
+2024-10-01,server_1,45,52,30,80,200,150,2,8,32,500,1000,0.5,85,80,90
+2024-10-02,server_1,48,55,32,85,220,155,2,8,32,550,1100,0.6,85,80,90
+2024-10-03,server_1,52,58,35,90,250,165,2,8,32,600,1200,0.7,85,80,90
+2024-10-04,server_1,58,62,38,100,280,175,2,8,32,650,1350,0.8,85,80,90
+2024-10-05,server_1,65,68,42,110,320,195,2,8,32,700,1500,1.0,85,80,90
+2024-10-06,server_1,72,74,48,120,360,210,2,8,32,750,1650,1.2,85,80,90
+2024-10-07,server_1,78,79,52,130,400,230,2,8,32,800,1800,1.5,85,80,90
+2024-10-08,server_1,82,83,57,140,450,260,2,8,32,850,2000,1.8,85,80,90
