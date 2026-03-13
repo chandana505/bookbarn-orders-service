@@ -1,0 +1,13 @@
+AI
+Al Fndays
+Al Friday Season 2 - Problem Statements
+Al-Based Infrastructure Capacity Planning Advisor
+PROBLEM STATEMENT
+IT infrastructure teams struggle to interpret capacity reports and plan for scaling due to complex metrics and forecasts.
+Manual analysis leads to either overprovisioning or resource shortages affecting service levels. An Al tool that generates clear capacity planning advice from raw metrics is needed.
+Data Considerations (Guidelines):
+Sample infrastructure monitoring data (CPU, memory, storage usage), historical scaling decisions, and threshold policies. Data can be static or simple CSV files.
+Feel free to generate synthetic data where appropriate using the provided environment
+SOLUTION EXPECTATIONS
+A web Ul where infrastructure metrics are uploaded and Al outputs a capacity planning report (3-5 sentences) with recommended actions, justifications, and risk warnings. This improves resource allocation and cost efficiency.
+Be creative to go beyond as you solve the above needs
