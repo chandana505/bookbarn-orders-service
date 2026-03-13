@@ -1,0 +1,18 @@
+[
+  {
+    "content": "Standard AWS scaling policy: CPU > 80% for 5min → scale out 20%. Memory > 75% → prioritize memory-optimized instances. Never exceed 90% disk utilization."
+  },
+  {
+    "content": "Historical incident report: Jan 2024 - request rate 2x spike caused 500ms response time degradation. Resolution: Added 3 EC2 instances, CloudWatch alarms for CPU>70%."
+  },
+  {
+    "content": "Capacity best practices: Forecast 20% buffer above peak. Auto-scaling policy: Scale in when CPU < 40% for 15min. Disk: Use EBS gp3, provisioned IOPS for high throughput."
+  },
+  {
+    "content": "Post-mortem: Memory leak in Node.js app caused OOM kills at 85% utilization. Action: Deploy to ECS Fargate with 16GB memory, health checks."
+  },
+  {
+    "content": "Network scaling guideline: NetworkIn > 100Mbps + CPU>70% → consider larger instance types (m5.large → m5.xlarge). Use ELB target groups."
+  }
+]
+
